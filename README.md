@@ -51,6 +51,19 @@ Para utilizar a aplicação, siga estas etapas:
 
 7. Em breve, esta aplicação será disponibilizada na Web, proporcionando uma experiência ainda mais acessível a todos.
 
+## Exemplo de uso
+
+**Tela 1**
+
+![image](https://github.com/RafaLemos86/Consumo_API_Sistemas_Distribuidos/assets/107224769/0096dd02-5ae2-4bfc-b3d3-e32b7b815200)
+
+**Tela 2**
+
+![image](https://github.com/RafaLemos86/Consumo_API_Sistemas_Distribuidos/assets/107224769/bcc64ee0-b903-49d8-9467-dedcbddefd99)
+
+
+
+
 ## Autor
 Rafael Lemos
 
