@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resultado da busca</title>
+    <!-- Inclua o CSS do Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Estilização personalizada */
+        body {
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        h2 {
+            margin-top: 20px;
+        }
+
+        .list-group-item {
+            border: none;
+        }
+
+        /* Estilização para os dados climáticos */
+        .clima-info {
+            background-color: #f2f2f2;
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        #texto {
+            margin-top: 20px;
+        }
+
+        /* Estilização para o botão de voltar */
+        .btn-voltar {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Resultado da busca</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <h2>CEP</h2>
+                <ul class="list-group">
+                    <li class="list-group-item"><strong>CEP:</strong> <%= cep.cep %> </li>
+                    <li class="list-group-item"><strong>Logradouro:</strong> <%= cep.logradouro %>  </li>
+                    <li class="list-group-item"><strong>Complemento:</strong> <%= cep.complemento %> </li>
+                    <li class="list-group-item"><strong>Bairro:</strong> <%= cep.bairro %> </li>
+                    <li class="list-group-item"><strong>Cidade:</strong> <%= cep.localidade %> </li>
+                    <li class="list-group-item"><strong>Estado:</strong> <%= cep.uf %> </li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h2>Informações climáticas</h2>
+                <ul class="list-group">
+                    <li class="list-group-item clima-info"><strong>Temperatura:</strong> <%= clima.data.temp %> °K</li>
+                    <li class="list-group-item clima-info"><strong>Descrição:</strong> <%= clima.data.weather[0].description %> </li>
+                    <li class="list-group-item clima-info"><strong>Pressão atmosférica:</strong> <%= clima.data.pressure %> hPa</li>
+                    <li class="list-group-item clima-info"><strong>Umidade:</strong> <%= clima.data.humidity %> </li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>Mais informações</h2>
+        <p id="texto">
+            <%- texto %>
+        </p>
+
+        <!-- Botão para voltar à Página Principal -->
+        <a href="/" class="btn btn-primary btn-voltar">Voltar à Página Principal</a>
+    </div>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
